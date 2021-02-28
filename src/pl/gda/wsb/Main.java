@@ -1,10 +1,12 @@
 package pl.gda.wsb;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Animal animal1 = new Animal("mouse", "Jerry", 0.5);
         Animal animal2 = new Animal("krowa", "Basia", 500);
 
@@ -51,11 +53,14 @@ public class Main {
             System.out.println(builder);
         }else System.out.println(tekst+phone2.name+" waga: " +phone2.weight);
     }
-    static void HumanLoop(ArrayList<Human> humans)
-    {
+    static void HumanLoop(ArrayList<Human> humans) throws IOException {
+        FileWriter fw = new FileWriter("human.txt", false);
+
         for(Human h : humans)
         {
             System.out.println(h.name+" "+h.surname);
-        }
+
+            fw.write(h.name+"\n");
+        }fw.close();
     }
 }
