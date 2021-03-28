@@ -42,7 +42,6 @@ public class Main {
         animal2.takeForWalk();
         animal2.feed();
 
-
     }
     static void CompareAnimals(Animal animal, Animal animal2)
     {
