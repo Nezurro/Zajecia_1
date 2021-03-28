@@ -13,9 +13,9 @@ public class Main {
         Animal animal1 = new Animal("mouse", "Jerry", 0.5);
         Animal animal2 = new Animal("cow", "Basia", 500);
 
-        Human human1 = new Human("Marek", "Ba");
-        Human human2 = new Human("Andrzej", "La");
-        Human human3 = new Human("Andrzej", "La");
+        Human human1 = new Human("Marek", "Ba", 100);
+        Human human2 = new Human("Andrzej", "La", 200);
+        Human human3 = new Human("Andrzej", "La", 200);
 
         Phone phone1 = new Phone(0.2f, "phone");
         Phone phone2 = new Phone(0.3f, "phone2");
@@ -50,6 +50,10 @@ public class Main {
         System.out.println(human2.equals(human3));
         System.out.println(human2);
         System.out.println(human3);
+
+        human1.getSalary();
+        human1.setSalary(-500.0);
+        human1.setSalary(900.0);
 
 
 

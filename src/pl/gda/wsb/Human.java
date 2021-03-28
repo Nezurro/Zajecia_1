@@ -2,6 +2,7 @@ package pl.gda.wsb;
 
 import devices.Car;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Human {
@@ -9,11 +10,29 @@ public class Human {
     String surname;
     Animal pet;
     Car car;
+    private Double salary;
+    public void getSalary()
+    {
+        System.out.println(LocalDateTime.now());
+    }
+    public void setSalary(Double value)
+    {
+        if(value <0)
+        {
+            System.out.println("Wartosc nie moze byc ujemna");
+        }else {
+            System.out.println("Dane wyslane do ksiegowosci");
+            System.out.println("Dane wyslane do Hanny z kadr");
+            System.out.println("Dane wyslane do ZUS i US");
+            this.salary = value;
+        }
+    }
 
 
-    public Human(String name, String surname) {
+    public Human(String name, String surname, double salary) {
         this.name = name;
         this.surname = surname;
+        this.salary = salary;
     }
 
     @Override
