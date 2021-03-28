@@ -40,4 +40,12 @@ public class Animal {
         else System.out.println("Zwierze " + name +  " nie zyje");
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }

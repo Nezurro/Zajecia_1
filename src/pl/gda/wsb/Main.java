@@ -12,15 +12,19 @@ public class Main {
 
         Human human1 = new Human("Marek", "Ba");
         Human human2 = new Human("Andrzej", "La");
+        Human human3 = new Human("Andrzej", "La");
 
         Phone phone1 = new Phone(0.2f, "phone");
         Phone phone2 = new Phone(0.3f, "phone2");
 
-        Car car1 = new Car("A3","Audi", 60000);
-        Car car2 = new Car("Macan","Porsche", 800000);
+        Car car1 = new Car("A3","Audi", 60000,Brand.Audi);
+        Car car2 = new Car("Macan","Porsche", 800000, Brand.Porsche);
+        Car car3 = new Car("A4","Audi", 80000,Brand.Audi);
+        Car car4 = new Car("A3","Audi", 60000,Brand.Audi);
 
         human1.car = car2;
         human2.car = car1;
+        human3.car = car1;
 
         ArrayList<Human>  humansList = new ArrayList<>();
         humansList.add(human1);
@@ -42,6 +46,13 @@ public class Main {
         animal2.takeForWalk();
         animal2.feed();
 
+        System.out.println(human2.equals(human3));
+        System.out.println(human2);
+        System.out.println(human3);
+        System.out.println(car1.hashCode()==car4.hashCode());
+        System.out.println(human2.hashCode()==human3.hashCode());
+
+        System.out.println((car1));
     }
     static void CompareAnimals(Animal animal, Animal animal2)
     {
