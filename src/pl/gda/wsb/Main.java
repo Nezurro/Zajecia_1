@@ -1,5 +1,8 @@
 package pl.gda.wsb;
 
+import devices.Car;
+import devices.Phone;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;

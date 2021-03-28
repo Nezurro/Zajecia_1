@@ -1,8 +1,8 @@
-package pl.gda.wsb;
+package devices;
 
 public class Phone {
-    Float weight;
-    String name;
+    public Float weight;
+    public String name;
 
     public Phone(Float weight, String name) {
         this.weight = weight;

@@ -1,11 +1,13 @@
-package pl.gda.wsb;
+package devices;
+
+import pl.gda.wsb.Brand;
 
 public class Car {
 
-    final String model;
-    final String producer;
-    int value;
-    Brand brand;
+    public final String model;
+    public final String producer;
+    public int value;
+    public Brand brand;
 
     public Car(String model, String producer,int value, Brand brand ) {
         this.model = model;

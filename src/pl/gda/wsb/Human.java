@@ -1,5 +1,7 @@
 package pl.gda.wsb;
 
+import devices.Car;
+
 import java.util.Objects;
 
 public class Human {
