@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Animal animal1 = new Animal("mouse", "Jerry", 0.5);
-        Animal animal2 = new Animal("krowa", "Basia", 500);
+        Animal animal2 = new Animal("cow", "Basia", 500);
 
         Human human1 = new Human("Marek", "Ba");
         Human human2 = new Human("Andrzej", "La");
@@ -27,6 +27,15 @@ public class Main {
         ComparePhones(phone1,phone2);
 
         HumanLoop(humansList);
+
+        animal1.feed();
+        animal1.takeForWalk();
+        animal1.takeForWalk();
+        animal1.takeForWalk();
+        animal2.takeForWalk();
+        animal2.takeForWalk();
+        animal2.feed();
+
 
     }
     static void CompareAnimals(Animal animal, Animal animal2)
