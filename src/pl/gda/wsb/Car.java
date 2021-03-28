@@ -6,6 +6,7 @@ public class Car {
     final String producer;
     int value;
 
+
     public Car(String model, String producer,int value ) {
         this.model = model;
         this.producer = producer;

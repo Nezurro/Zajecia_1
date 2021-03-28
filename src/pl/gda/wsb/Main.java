@@ -19,8 +19,8 @@ public class Main {
         Car car1 = new Car("A3","Audi", 60000);
         Car car2 = new Car("Macan","Porsche", 800000);
 
-        human1.car = car1;
-        human2.car = car2;
+        human1.car = car2;
+        human2.car = car1;
 
         ArrayList<Human>  humansList = new ArrayList<>();
         humansList.add(human1);
@@ -41,7 +41,6 @@ public class Main {
         animal2.takeForWalk();
         animal2.takeForWalk();
         animal2.feed();
-
 
     }
     static void CompareAnimals(Animal animal, Animal animal2)
