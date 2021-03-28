@@ -16,6 +16,12 @@ public class Main {
         Phone phone1 = new Phone(0.2f, "phone");
         Phone phone2 = new Phone(0.3f, "phone2");
 
+        Car car1 = new Car("A3","Audi", 60000);
+        Car car2 = new Car("Macan","Porsche", 800000);
+
+        human1.car = car1;
+        human2.car = car2;
+
         ArrayList<Human>  humansList = new ArrayList<>();
         humansList.add(human1);
         humansList.add(human2);
@@ -67,7 +73,7 @@ public class Main {
 
         for(Human h : humans)
         {
-            System.out.println(h.name+" "+h.surname);
+            System.out.println(h.name+" "+h.surname+" "+h.car.producer);
 
             fw.write(h.name+"\n");
         }fw.close();
