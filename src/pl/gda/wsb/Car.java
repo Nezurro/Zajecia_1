@@ -7,8 +7,7 @@ public class Car {
     int value;
     Brand brand;
 
-
-    public Car(String model, String producer,int value, Brand brand){
+    public Car(String model, String producer,int value, Brand brand ) {
         this.model = model;
         this.producer = producer;
         this.value = value;
@@ -21,7 +20,6 @@ public class Car {
                 "model='" + model + '\'' +
                 ", producer='" + producer + '\'' +
                 ", value=" + value +
-                ", brand=" + brand +
                 '}';
     }
 }
