@@ -24,8 +24,6 @@ public class Main {
         Car car2 = new Car("Macan","Porsche", 800000, Brand.Porsche);
         Car car3 = new Car("A3","Audi", 60000, Brand.Audi);
 
-        human1.car = car1;
-        human2.car = car2;
 
         ArrayList<Human>  humansList = new ArrayList<>();
         humansList.add(human1);
@@ -53,7 +51,10 @@ public class Main {
 
         human1.getSalary();
         human1.setSalary(-500.0);
-        human1.setSalary(900.0);
+        human1.setSalary(9000.0);
+
+        human1.setCar(car3);
+        human2.setCar(car2);
 
 
 
@@ -87,7 +88,7 @@ public class Main {
 
         for(Human h : humans)
         {
-            System.out.println(h.name+" "+h.surname+" "+h.car.producer);
+            System.out.println(h.name+" "+h.surname+" ");
 
             fw.write(h.name+"\n");
         }fw.close();

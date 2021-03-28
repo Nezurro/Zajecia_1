@@ -9,7 +9,23 @@ public class Human {
     String name;
     String surname;
     Animal pet;
-    Car car;
+    private Car car;
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        if(salary > car.value)
+        {
+            System.out.println("Kupiono samochod za gotowke");
+            this.car = car;
+        }else if(salary > car.value/12)
+        {
+            System.out.println("Kupiono samochod w kredycie");
+        }else System.out.println("Nie stac Cie na ten samochod");
+    }
+
     private Double salary;
     public void getSalary()
     {
