@@ -1,6 +1,8 @@
 package Creatures;
 
-public class Animal {
+import pl.gda.wsb.Feedable;
+
+public abstract class Animal implements Feedable {
     final public String species;
     public String name;
     public Double weight;

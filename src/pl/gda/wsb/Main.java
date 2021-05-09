@@ -1,6 +1,7 @@
 package pl.gda.wsb;
 
 import Creatures.Animal;
+import Creatures.FarmAnimal;
 import Creatures.Human;
 import devices.Car;
 import devices.Phone;
@@ -12,8 +13,6 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Animal animal1 = new Animal("mouse", "Jerry", 0.5);
-        Animal animal2 = new Animal("cow", "Basia", 500.0);
 
         Human human1 = new Human("Marek", "Ba", 100.0, 5000.0, "HomoSapiens", 75.0);
         Human human2 = new Human("Andrzej", "La", 200.0,10000.0, "HomoSapiens", 75.0);
@@ -31,21 +30,11 @@ public class Main {
         humansList.add(human1);
         humansList.add(human2);
 
-        System.out.println(animal1);
         System.out.println(human1);
         System.out.println(phone1);
-        CompareAnimals(animal1, animal2);
         ComparePhones(phone1,phone2);
 
         HumanLoop(humansList);
-
-        animal1.feed();
-        animal1.takeForWalk();
-        animal1.takeForWalk();
-        animal1.takeForWalk();
-        animal2.takeForWalk();
-        animal2.takeForWalk();
-        animal2.feed();
 
         System.out.println(human2.equals(human3));
         System.out.println(human2);
@@ -66,7 +55,8 @@ public class Main {
         car1.sell(human1,human2,1000.0);
         human1.sell(human2,human3,100.0);
 
-
+        FarmAnimal krowa = new FarmAnimal("Krowa", "Basia", 500.0);
+        krowa.feed(500.0);
 
     }
     static void CompareAnimals(Animal animal, Animal animal2)
