@@ -1,4 +1,4 @@
-package pl.gda.wsb;
+package Creatures;
 
 import devices.Car;
 import devices.Phone;
@@ -6,9 +6,9 @@ import devices.Phone;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Human {
-    String name;
-    String surname;
+public class Human extends Animal{
+    public String name;
+    public String surname;
     public Animal pet;
     public Car car;
     public Phone phone;
@@ -48,7 +48,8 @@ public class Human {
     }
 
 
-    public Human(String name, String surname, Double salary, Double cash) {
+    public Human(String name, String surname, Double salary, Double cash, String species, Double weight) {
+        super(species,name,weight);
         this.name = name;
         this.surname = surname;
         this.salary = salary;

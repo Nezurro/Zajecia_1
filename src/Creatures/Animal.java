@@ -1,14 +1,14 @@
-package pl.gda.wsb;
+package Creatures;
 
 public class Animal {
-    final String species;
-    String name;
-    double weight;
+    final public String species;
+    public String name;
+    public Double weight;
 
     public static final Double DEFAULT_MOUSE_WEIGHT = 1.0;
     public static final Double DEFAULT_KROWA_WEIGHT = 500.0;
 
-    public Animal(String species, String name, double weight) {
+    public Animal(String species, String name, Double weight) {
         this.species = species;
         this.name = name;
 
@@ -18,10 +18,10 @@ public class Animal {
         }else if(species.equals(("cow")))
         {
             this.weight = DEFAULT_KROWA_WEIGHT;
-        }else this.weight = 0;
+        }else this.weight = 0.0;
     }
 
-    void feed()
+    public void feed()
     {
         if(weight >0)
         {
@@ -30,7 +30,7 @@ public class Animal {
         }
         else System.out.println("Zwierze " + name +  " nie zyje");
     }
-    void takeForWalk()
+    public void takeForWalk()
     {
         if(weight >0)
         {
@@ -51,6 +51,10 @@ public class Animal {
 
     public void sell(Human seller, Human buyer, Double price)
     {
+        if(this.species =="HomoSapiens")
+        {
+            System.out.println("Handel ludzmi zakazany!");
+        }else
         if(seller.pet !=null)
         {
             System.out.println(seller.toString()+ " Posiada Zwierze");

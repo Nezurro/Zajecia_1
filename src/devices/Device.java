@@ -1,6 +1,6 @@
 package devices;
 
-import pl.gda.wsb.Human;
+import Creatures.Human;
 import pl.gda.wsb.sellable;
 
 public abstract class Device implements sellable {

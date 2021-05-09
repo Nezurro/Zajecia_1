@@ -1,5 +1,7 @@
 package pl.gda.wsb;
 
+import Creatures.Animal;
+import Creatures.Human;
 import devices.Car;
 import devices.Phone;
 
@@ -11,11 +13,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Animal animal1 = new Animal("mouse", "Jerry", 0.5);
-        Animal animal2 = new Animal("cow", "Basia", 500);
+        Animal animal2 = new Animal("cow", "Basia", 500.0);
 
-        Human human1 = new Human("Marek", "Ba", 100.0, 5000.0);
-        Human human2 = new Human("Andrzej", "La", 200.0,10000.0);
-        Human human3 = new Human("Andrzej", "La", 200.0,0.0);
+        Human human1 = new Human("Marek", "Ba", 100.0, 5000.0, "HomoSapiens", 75.0);
+        Human human2 = new Human("Andrzej", "La", 200.0,10000.0, "HomoSapiens", 75.0);
+        Human human3 = new Human("Andrzej", "La", 200.0,0.0, "HomoSapiens", 75.0);
 
         Phone phone1 = new Phone(0.2f, "phone", "Sony", 2010, "XYZ");
         Phone phone2 = new Phone(0.3f, "phone2", "LG", 2020, "ABC");
@@ -62,6 +64,7 @@ public class Main {
         human1.car = car1;
         car2.sell(human1,human2,500.0);
         car1.sell(human1,human2,1000.0);
+        human1.sell(human2,human3,100.0);
 
 
 
