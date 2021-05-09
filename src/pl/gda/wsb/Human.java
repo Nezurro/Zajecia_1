@@ -1,6 +1,7 @@
 package pl.gda.wsb;
 
 import devices.Car;
+import devices.Phone;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -8,8 +9,10 @@ import java.util.Objects;
 public class Human {
     String name;
     String surname;
-    Animal pet;
-    private Car car;
+    public Animal pet;
+    public Car car;
+    public Phone phone;
+    public Double cash;
 
     public Car getCar() {
         return car;
@@ -45,10 +48,11 @@ public class Human {
     }
 
 
-    public Human(String name, String surname, double salary) {
+    public Human(String name, String surname, Double salary, Double cash) {
         this.name = name;
         this.surname = surname;
         this.salary = salary;
+        this.cash = cash;
     }
 
     @Override

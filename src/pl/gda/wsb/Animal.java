@@ -48,4 +48,21 @@ public class Animal {
                 ", weight=" + weight +
                 '}';
     }
+
+    public void sell(Human seller, Human buyer, Double price)
+    {
+        if(seller.pet !=null)
+        {
+            System.out.println(seller.toString()+ " Posiada Zwierze");
+            if(buyer.cash >= price)
+            {
+                buyer.cash -= price;
+                seller.cash += price;
+                buyer.pet = seller.pet;
+                seller.pet = null;
+
+                System.out.println("Transakcja została przeprowadzona pomyślnie." + buyer.toString() + " kupił zwierze od: " + seller.toString());
+            }else System.out.println("Kupujacy nie posiada tyle gotówki");
+        }
+    }
 }
