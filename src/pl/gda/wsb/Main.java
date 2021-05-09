@@ -17,12 +17,12 @@ public class Main {
         Human human2 = new Human("Andrzej", "La", 200);
         Human human3 = new Human("Andrzej", "La", 200);
 
-        Phone phone1 = new Phone(0.2f, "phone");
-        Phone phone2 = new Phone(0.3f, "phone2");
+        Phone phone1 = new Phone(0.2f, "phone", "Sony", 2010, "XYZ");
+        Phone phone2 = new Phone(0.3f, "phone2", "LG", 2020, "ABC");
 
-        Car car1 = new Car("A3","Audi", 60000, Brand.Audi);
-        Car car2 = new Car("Macan","Porsche", 800000, Brand.Porsche);
-        Car car3 = new Car("A3","Audi", 60000, Brand.Audi);
+        Car car1 = new Car("A3","Audi", 60000, Brand.Audi,2005);
+        Car car2 = new Car("Macan","Porsche", 800000, Brand.Porsche, 2015);
+        Car car3 = new Car("A3","Audi", 60000, Brand.Audi, 2020);
 
 
         ArrayList<Human>  humansList = new ArrayList<>();
@@ -55,6 +55,9 @@ public class Main {
 
         human1.setCar(car3);
         human2.setCar(car2);
+
+        car1.TurnOn();
+        phone1.TurnOn();
 
 
 

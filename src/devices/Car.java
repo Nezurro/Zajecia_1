@@ -2,16 +2,13 @@ package devices;
 
 import pl.gda.wsb.Brand;
 
-public class Car {
+public class Car extends Device{
 
-    public final String model;
-    public final String producer;
     public int value;
     public Brand brand;
 
-    public Car(String model, String producer,int value, Brand brand ) {
-        this.model = model;
-        this.producer = producer;
+    public Car(String model, String producer,Integer value, Brand brand, Integer yearOfProduction ) {
+        super(producer, model, yearOfProduction);
         this.value = value;
         this.brand = brand;
     }
@@ -23,5 +20,10 @@ public class Car {
                 ", producer='" + producer + '\'' +
                 ", value=" + value +
                 '}';
+    }
+
+    @Override
+    public void TurnOn() {
+        System.out.println("Samochod został uruchomiony");
     }
 }
